@@ -1,0 +1,17 @@
+```yaml
+name: Supabase Ping
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          curl -X GET "https://ciqxpdyaiudv1mvnypkt.supabase.co/rest/v1/" \
+          -H "apikey: sb_publishable_WUG1SAeqUNhu0cv17wNUZQ_Uvy1Da18"
+
+```
